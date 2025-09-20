@@ -249,7 +249,7 @@ const Service = () => {
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="/rooms"
+                            onClick={()=>navigate('/rooms')}
                             className="inline-block bg-white/10 border border-white/30 text-white hover:bg-white/20 px-6 py-3 rounded-xl font-medium backdrop-blur-sm transition-colors"
                         >
                             View Full Gallery
