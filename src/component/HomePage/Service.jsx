@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { Bed, Utensils, Wifi, Shield, Home, Star, MapPin, Phone, Mail } from 'lucide-react';
 import CountUp from '../CountUp';
+import { useNavigate } from 'react-router-dom';
 
 const Service = () => {
     const fadeInUp = {
@@ -23,6 +24,7 @@ const Service = () => {
         { icon: Wifi, title: 'High-Speed WiFi', desc: 'Free high-speed internet access' },
         { icon: Shield, title: '24/7 Security', desc: 'Round-the-clock security for your safety' },
     ];
+    const navigate = useNavigate();
 
     const services = [
         {
@@ -81,7 +83,7 @@ const Service = () => {
                                 <motion.a
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    href="#gallery"
+                                    onClick={() => navigate('/rooms')}
                                     className="border border-amber-500 text-amber-600 hover:bg-amber-50 px-6 py-3 rounded-lg font-medium"
                                 >
                                     View Gallery

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import HeroSection from './Hero.jsx';
 import Service from './Service.jsx';
 import { motion } from 'framer-motion';
@@ -49,6 +50,7 @@ const HomePage = () => {
     };
 
 
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen">
             <HeroSection />
@@ -113,7 +115,7 @@ const HomePage = () => {
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="border border-amber-500 text-amber-600 px-6 py-3 rounded-lg font-medium"
-                                    onClick={() => window.location.href = '/rooms'}
+                                    onClick={() => navigate('/rooms')}
                                 >
                                     View Gallery
                                 </motion.button>
