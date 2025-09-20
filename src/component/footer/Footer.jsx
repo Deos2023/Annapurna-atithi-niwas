@@ -272,7 +272,7 @@ const Footer = () => {
                             viewport={{ once: true }}
                             className="text-slate-500 text-sm mb-4 md:mb-0 flex items-center"
                         >
-                            © {currentYear} Annapurna Atithi Niwas. Made with <Heart className="w-4 h-4 text-amber-500 mx-1" fill="currentColor" /> in Kolkata
+                            © {currentYear} Annapurna Atithi Niwas. Made with <Heart className="w-4 h-4 text-amber-500 mx-1" fill="currentColor" /> in Kolkata. Developed and Maintained by Digital Exposure Online Services.
                         </motion.p>
                         <div className="flex space-x-6 text-sm text-slate-500">
                             <motion.a
