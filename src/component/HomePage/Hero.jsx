@@ -41,13 +41,13 @@ const HeroSection = () => {
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
                 >
                     <a
-                        href="#booking"
+                        href="tel:+919830431930"
                         className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-300 shadow-lg hover:shadow-amber-500/30"
                     >
                         Book Your Stay
                     </a>
                     <a
-                        href="#contact"
+                        href="/contact"
                         className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300"
                     >
                         Contact Us

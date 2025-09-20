@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  MessageCircle, 
-  Send, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Send,
   CheckCircle,
   Clock,
   User,
@@ -86,26 +86,26 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Create WhatsApp message
-    const message = `Hello! I would like to make an inquiry about staying at Maa Annapurna Athiti Niwas.%0A%0A` +
-                   `*Name:* ${formData.name}%0A` +
-                   `*Email:* ${formData.email}%0A` +
-                   `*Phone:* ${formData.phone}%0A` +
-                   `*Room Type:* ${formData.roomType}%0A` +
-                   `*Check-in:* ${formData.checkIn}%0A` +
-                   `*Check-out:* ${formData.checkOut}%0A` +
-                   `*Guests:* ${formData.guests}%0A` +
-                   `*Message:* ${formData.message}%0A%0A` +
-                   `Please contact me with availability and pricing. Thank you!`;
 
-    // Open WhatsApp with pre-filled message
-    window.open(`https://wa.me/919748517824?text=${message}`, '_blank');
-    
+    // Create WhatsApp message
+    const message = `Hello! I would like to make an inquiry about staying at Maa Annapurna Athiti Niwas.\n\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Phone:* ${formData.phone}\n` +
+      `*Room Type:* ${formData.roomType}\n` +
+      `*Check-in:* ${formData.checkIn}\n` +
+      `*Check-out:* ${formData.checkOut}\n` +
+      `*Guests:* ${formData.guests}\n` +
+      `*Message:* ${formData.message}\n\n` +
+      `Please contact me with availability and pricing. Thank you!`;
+
+    // Open WhatsApp with pre-filled message (URL-encoded)
+    window.open(`https://wa.me/9830431930?text=${encodeURIComponent(message)}`, '_blank');
+
     // Show success animation
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
-    
+
     // Reset form
     setFormData({
       name: '',
@@ -183,19 +183,19 @@ const ContactPage = () => {
         variants={fadeInUp}
         className="text-center py-16 px-4"
       >
-        <motion.span 
+        <motion.span
           variants={fadeInUp}
           className="inline-block bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
         >
           Get In Touch
         </motion.span>
-        <motion.h1 
+        <motion.h1
           variants={fadeInUp}
           className="text-4xl md:text-5xl font-serif font-bold text-slate-800 mb-6"
         >
           Contact Us
         </motion.h1>
-        <motion.p 
+        <motion.p
           variants={fadeInUp}
           className="text-xl text-slate-600 max-w-2xl mx-auto"
         >
