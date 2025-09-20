@@ -282,7 +282,7 @@ const FacilitiesPage = () => {
                 className="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold mt-6 shadow-md hover:bg-amber-600 transition-colors"
                 onClick={() => {
                   const message = encodeURIComponent(
-                    `Booking Inquiry:\nRoom Type: ${room.type}\nPrice: ${room.price}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}`
+                    `Hello! I would like to book a room at Maa Annapurna Athiti Niwas.\n\nRoom Type: ${room.type}\nPrice: ${room.price}\nFeatures: ${room.features.join(', ')}\nDescription: ${room.description}\n\nPlease let me know the availability and booking process. Thank you!`
                   );
                   window.open(`https://wa.me/919830431930?text=${message}`, '_blank');
                 }}
