@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MapPin, Star, Bed, Home, Utensils, Wifi, Car } from 'lucide-react';
 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (location.pathname === '/') {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 50);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    } else {
+      setIsScrolled(false);
+    }
+  }, [location.pathname]);
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -43,7 +48,7 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="font-medium text-slate-500 hover:text-amber-700 px-4 py-2 rounded-lg transition-colors duration-300"
+              className={`font-medium ${location.pathname === '/' ? (isScrolled ? 'text-slate-700' : 'text-slate-200') : 'text-slate-700'} hover:text-amber-700 px-4 py-2 rounded-lg transition-colors duration-300`}
             >
               {item.name}
             </Link>
