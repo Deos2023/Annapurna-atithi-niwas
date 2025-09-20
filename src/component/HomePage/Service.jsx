@@ -249,7 +249,7 @@ const Service = () => {
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            onClick={()=>navigate('/rooms')}
+                            onClick={() => navigate('/rooms')}
                             className="inline-block bg-white/10 border border-white/30 text-white hover:bg-white/20 px-6 py-3 rounded-xl font-medium backdrop-blur-sm transition-colors"
                         >
                             View Full Gallery
@@ -295,7 +295,9 @@ const Service = () => {
                             <motion.a
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                href="#location"
+                                href="https://www.google.com/maps/place/MAA+ANNAPURNA+ATITHI+NIBASH(guest+House)/@22.537102,88.339992,16z/data=!4m6!3m5!1s0x3a02776b96514013:0x586c252167431f7b!8m2!3d22.5371024!4d88.3399921!16s%2Fg%2F11h7krtwfq?hl=en"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block"
                             >
                                 Get Directions
